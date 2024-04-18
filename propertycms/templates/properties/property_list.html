@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="grid-container">
+        {% for property in properties %}
+            <div class="grid-item"><a href="{% url 'item_detail' property.id %}">{{ property.name }}</a></div>
+        {% endfor %}
+    </div>
+{% endblock %}

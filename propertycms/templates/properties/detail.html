@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ item.name }}</title>
+</head>
+<body>
+    <h1>Adress : {{ item.address }}</h1>
+    {% if request.user == item.posted_by %}
+    <a href="{% url 'edit_property' pk=item.pk %}">Edit</a>
+    {% endif %}
+    <p></p>
+</body>
+</html>
+
+
